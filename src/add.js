@@ -22,7 +22,9 @@ function add(num1, num2) {
     }
     ans = value.concat(ans)
   }
-  if (carry!=0){ans = '1'.concat(ans)}
+  if (carry!=0){
+    ans = '1'.concat(ans)
+  }
   return ans
 }
 module.exports = add;
