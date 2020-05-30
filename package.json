@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Peter2-71828/stringMaths#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "mocha": "^7.2.0"
   }
 }

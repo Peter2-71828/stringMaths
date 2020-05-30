@@ -14,7 +14,7 @@
 
 ## Technologies
 * Javascript
-* Mocha
+* Mocha + chai module
 * C++
 
 ## Tasks
