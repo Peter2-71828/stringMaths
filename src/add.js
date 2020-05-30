@@ -12,7 +12,7 @@ function add(num1, num2) {
   }
 
   for (i=1; i<=max; i++){
-    var value = Number(num1[max-i]) + Number(num2[max-i]) + carry
+    var value = Number(num1.charAt(length1-i)) + Number(num2.charAt(length2-i)) + carry
     if (value>9){
       value = (value%10).toString()
       carry = 1

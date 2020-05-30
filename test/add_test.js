@@ -17,16 +17,15 @@ describe('#add', function(){
     })
   })
   describe('1000 test, input 0 to 999', function(){
-    var count = 0
-    while(count<1000) {
-      var num1 = Math.floor(Math.random()*1000)
-      var num2 = Math.floor(Math.random()*1000)
-      var ans = (num1+num2).toString()
-      it(`${num1} + ${num2} should equal `+ans, function(){
+    it('1000 test, input 0 to 999', function(){
+      var count = 0
+      while(count<1000) {
+        var num1 = Math.floor(Math.random()*1000)
+        var num2 = Math.floor(Math.random()*1000)
+        var ans = (num1+num2).toString()
         expect(add(num1.toString(), num2.toString())).to.equal(ans);
-      })
-      if(false){break}
-      count++
-    }
+        count++
+      }
+    })
   })
 })
