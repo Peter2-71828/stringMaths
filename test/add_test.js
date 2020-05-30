@@ -9,5 +9,8 @@ describe('#add', function(){
     it('0+1=1', function(){
       expect(add('0','1')).to.equal('1');
     })
+    it('10+12=22', function(){
+      expect(add('10','12')).to.equal('22');
+    })
   })
 })

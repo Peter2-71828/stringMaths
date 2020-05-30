@@ -1,7 +1,17 @@
 function add(num1, num2) {
   var ans = ""
-  for (i=0; i<1; i++){
-    var value = (Number(num1[i]) + Number(num2[i])).toString()
+  var max;
+
+  var length1 = num1.length
+  var length2 = num2.length
+  if (length1 < length2){
+    max = length2
+  }else {
+    max = length1
+  }
+
+  for (i=1; i<=max; i++){
+    var value = (Number(num1[max-i]) + Number(num2[max-i])).toString()
     ans = ans.concat(value)
   }
   return ans
