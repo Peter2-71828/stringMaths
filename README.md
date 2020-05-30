@@ -4,7 +4,7 @@
 * [Aims](#aims)
 * [Technologies](#technologies)
 * [Tasks](#tasks)
-  * [Ing Progress](#in_progress)
+  * [In Progress](#in-progress)
   * [Completed](#completed)
 
 ## Aims
