@@ -9,3 +9,11 @@
 * Javascript
 * Mocha
 * C++
+
+## Tasks
+
+### In Progress
+* Test and write a add function in javascript
+* Test and write a subtract function in javascript
+
+### Completed
