@@ -12,5 +12,8 @@ describe('#add', function(){
     it('10+12=22', function(){
       expect(add('10','12')).to.equal('22');
     })
+    it('97+15=112', function(){
+      expect(add('97','15')).to.equal('112');
+    })
   })
 })
