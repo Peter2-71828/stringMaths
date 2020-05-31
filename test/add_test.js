@@ -35,5 +35,8 @@ describe('#add', function(){
     it('5-2=3', function(){
       expect(add('5','-2')).to.equal('3');
     })
+    it('-24+4=3', function(){
+      expect(add('-24','4')).to.equal('-20');
+    })
   })
 })
