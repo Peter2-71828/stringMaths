@@ -18,6 +18,14 @@ function basicAdd(num1, num2, carry=0){
   }return ans
 }
 
+function add(num1, num2){
+  var ans = ''
+  if (num1.includes('-') && num2.includes('-')){
+    num1 = num1.replace('-', '')
+    num2 = num2.replace('-', '')
+  }
+  return ans.concat(basicAdd(num1, num2))
+}
 
 // Multiplication signing
 // function add(num1, num2){

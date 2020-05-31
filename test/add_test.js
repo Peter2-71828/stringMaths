@@ -30,7 +30,7 @@ describe('#add', function(){
   })
   describe('#non positve integer cases', function(){
     it('0-0=0', function(){
-      expect(add('0','-0')).to.equal('0');
+      expect(add('-0','-0')).to.equal('0');
     })
   })
 })
