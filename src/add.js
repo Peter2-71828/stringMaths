@@ -18,6 +18,26 @@ function basicAdd(num1, num2, carry=0){
   }return ans
 }
 
+function basicMinus(num1, num2, carry=0){
+  var ans
+  var length1 = num1.length
+  var length2 = num2.length
+  var value = Number(num1.charAt(length1-1))-Number(num2.charAt(length2-1))-carry
+  if (length1 > 1 || length2 > 1){
+    num1 = num1.slice(0, length1-1)
+    num2 = num2.slice(0, length2-1)
+    if (value<0){
+      value = (value%0.1).toString()
+      ans = basicMinus(num1, num2, 1).concat(value)
+    }else{
+      value = value.toString()
+      ans = basicMinus(num1, num2, 0).concat(value)
+    }
+  }else{
+    ans = value.toString()
+  }return ans
+}
+
 function add(num1, num2){
   var ans;
   if (num1.includes('-') & num2.includes('-')){
@@ -25,7 +45,13 @@ function add(num1, num2){
     num2 = num2.replace('-', '')
     ans = '-'.concat(basicAdd(num1, num2))
   }else if (num1.includes('-') ^ num2.includes('-')){
-
+    if (num1.includes('-')){
+      num1 = num1.replace('-', '')
+      ans = basicMinus(num2, num1)
+    }else {
+      num2 = num2.replace('-', '')
+      ans = basicMinus(num1, num2)
+    }
   }else{
     ans = basicAdd(num1, num2)
   }
