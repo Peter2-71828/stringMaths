@@ -20,6 +20,9 @@
 ## Tasks
 
 ### In Progress
-* Test and write an add function in javascript
+* Refactor
+* Extend code to function with decimal inputs
 
 ### Completed
+* Test and write function for positive integer addition
+* Test and modify code for negative integer addition and subtraction
