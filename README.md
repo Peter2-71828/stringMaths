@@ -20,7 +20,6 @@
 ## Tasks
 
 ### In Progress
-* Test and write a add function in javascript
-* Test and write a subtract function in javascript
+* Test and write an add function in javascript
 
 ### Completed
