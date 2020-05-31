@@ -29,8 +29,11 @@ describe('#add', function(){
     })
   })
   describe('#non positve integer cases', function(){
-    it('0-0=0', function(){
-      expect(add('-0','-0')).to.equal('0');
+    it('-5-7=-12', function(){
+      expect(add('-5','-7')).to.equal('-12');
+    })
+    it('5-2=3', function(){
+      expect(add('5','-2')).to.equal('3');
     })
   })
 })
