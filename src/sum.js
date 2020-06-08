@@ -1,5 +1,6 @@
-var add = require('./add.js');
-var minus = require('./minus.js');
+const path = require('path')
+const add = require(path.join(__dirname,'add.js'))
+const minus = require(path.join(__dirname,'minus.js'))
 
 function sum(num1, num2){
   var ans;
