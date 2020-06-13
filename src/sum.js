@@ -12,9 +12,37 @@ function sum(num1, num2){
     if (num1.includes('-')){
       num1 = num1.replace('-', '')
       ans = minus(num2, num1)
+      if (ans.charAt(0)=='-'){
+        var newAns = '-'
+        for (var i=1; i<ans.length-1; i++){
+          newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
+        }
+        console.log(newAns)
+        console.log(ans)
+          console.log(newAns.concat('0'))
+        if (ans.charAt(ans.length-1)==0){
+          ans = sum(newAns.concat('0'), '-10')
+        }else {
+            ans = newAns.concat((10-Number(ans.charAt(ans.length-1))).toString())
+        }
+      }
     }else {
       num2 = num2.replace('-', '')
       ans = minus(num1, num2)
+      if (ans.charAt(0)=='-'){
+        var newAns = '-'
+        for (var i=1; i<ans.length-1; i++){
+          newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
+        }
+        console.log(newAns)
+        console.log(ans)
+        console.log(newAns.concat('0'))
+        if (ans.charAt(ans.length-1)==0){
+          ans = sum(newAns.concat('0'), '-10')
+        }else {
+            ans = newAns.concat((10-Number(ans.charAt(ans.length-1))).toString())
+        }
+      }
     }
   }else{
     ans = add(num1, num2)

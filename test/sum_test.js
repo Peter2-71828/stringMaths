@@ -35,8 +35,11 @@ describe('#sum', function(){
     it('5-2=3', function(){
       expect(sum('5','-2')).to.equal('3');
     })
-    it('-24+4=3', function(){
+    it('-24+4=-20', function(){
       expect(sum('-24','4')).to.equal('-20');
+    })
+    it('13-576=-563', function(){
+      expect(sum('13','-576')).to.equal('-563');
     })
   })
 })

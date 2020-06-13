@@ -7,13 +7,16 @@ function minus(num1, num2, carry=0){
     num1 = num1.slice(0, length1-1)
     num2 = num2.slice(0, length2-1)
     if (value<0){
-      value = (value%0.1).toString()
+      value = (value+10).toString()
       ans = minus(num1, num2, 1).concat(value)
     }else{
       value = value.toString()
       ans = minus(num1, num2, 0).concat(value)
     }
   }else{
+    if (value<0){
+      value = '-'.concat((value+10).toString())
+    }
     ans = value.toString()
   }return ans
 }
