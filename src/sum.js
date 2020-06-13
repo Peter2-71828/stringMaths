@@ -41,7 +41,15 @@ function sum(num1, num2){
   }else{
     ans = add(num1, num2)
   }
-  return ans
+  if (ans.charAt(0)=='-'&&ans.length>1){
+    while (ans.charAt(1)=='0'){
+      ans = '-'.concat(ans.slice(2))
+    }
+  }else {
+    while (ans.charAt(0)=='0'&&ans.length>1){
+      ans = ans.slice(1)
+    }
+  }return ans
 }
 module.exports = sum;
 

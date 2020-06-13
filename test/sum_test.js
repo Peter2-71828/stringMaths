@@ -42,4 +42,16 @@ describe('#sum', function(){
       expect(sum('13','-576')).to.equal('-563');
     })
   })
+  describe('1000 test, input -999 to 999', function(){
+    it('1000 test, input 0 to 999', function(){
+      var count = 0
+      while(count<1000) {
+        var num1 = Math.floor((Math.random()-Math.random())*1000)
+        var num2 = Math.floor((Math.random()-Math.random())*1000)
+        var ans = (num1+num2).toString()
+        expect(sum(num1.toString(), num2.toString())).to.equal(ans);
+        count++
+      }
+    })
+  })
 })
