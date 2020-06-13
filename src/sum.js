@@ -17,9 +17,6 @@ function sum(num1, num2){
         for (var i=1; i<ans.length-1; i++){
           newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
         }
-        console.log(newAns)
-        console.log(ans)
-          console.log(newAns.concat('0'))
         if (ans.charAt(ans.length-1)==0){
           ans = sum(newAns.concat('0'), '-10')
         }else {
@@ -34,9 +31,6 @@ function sum(num1, num2){
         for (var i=1; i<ans.length-1; i++){
           newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
         }
-        console.log(newAns)
-        console.log(ans)
-        console.log(newAns.concat('0'))
         if (ans.charAt(ans.length-1)==0){
           ans = sum(newAns.concat('0'), '-10')
         }else {
@@ -49,6 +43,7 @@ function sum(num1, num2){
   }
   return ans
 }
+module.exports = sum;
 
 // Multiplication signing
 // function add(num1, num2){
@@ -90,4 +85,3 @@ function sum(num1, num2){
 //   }
 //   return ans
 // }
-module.exports = sum;
