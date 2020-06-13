@@ -16,7 +16,7 @@ describe('#sum', function(){
       expect(sum('97','15')).to.equal('112');
     })
   })
-  describe('1000 test, input 0 to 999', function(){
+  describe('#1000 test, input 0 to 999', function(){
     it('1000 test, input 0 to 999', function(){
       var count = 0
       while(count<1000) {
@@ -42,8 +42,8 @@ describe('#sum', function(){
       expect(sum('13','-576')).to.equal('-563');
     })
   })
-  describe('1000 test, input -999 to 999', function(){
-    it('1000 test, input 0 to 999', function(){
+  describe('#1000 test, input -999 to 999', function(){
+    it('1000 test, input -999 to 999', function(){
       var count = 0
       while(count<1000) {
         var num1 = Math.floor((Math.random()-Math.random())*1000)
