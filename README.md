@@ -20,9 +20,11 @@
 ## Tasks
 
 ### In Progress
-* Refactor
+* Significant refactoring is required at minimum to reduce repetition though currently an alternative approach is being considered. Potentially examining ideas in a new branch would be prudent.  
+* Modify code to be contained in Class/classes
 * Extend code to function with decimal inputs
 
 ### Completed
 * Test and write function for positive integer addition
-* Test and modify code for negative integer addition and subtraction
+* Test and modify code for negative integer addition
+  * Multiple approaches have been tried in the pursuit of increasing efficiency though steps have not been taken at this point to quantify improvements

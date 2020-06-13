@@ -41,7 +41,7 @@ function sum(num1, num2){
   }else{
     ans = add(num1, num2)
   }
-  if (ans.charAt(0)=='-'&&ans.length>1){
+  if (ans.charAt(0)=='-'){
     while (ans.charAt(1)=='0'){
       ans = '-'.concat(ans.slice(2))
     }
