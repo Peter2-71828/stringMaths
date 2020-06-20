@@ -13,31 +13,11 @@ function sum(num1, num2){
     if (num1.includes('-')){
       num1 = num1.replace('-', '')
       ans = minus(num2, num1)
-      if (ans.charAt(0)=='-'){
-        var newAns = '-'
-        for (var i=1; i<ans.length-1; i++){
-          newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
-        }
-        if (ans.charAt(ans.length-1)==0){
-          ans = sum(newAns.concat('0'), '-10')
-        }else {
-            ans = newAns.concat((10-Number(ans.charAt(ans.length-1))).toString())
-        }
-      }
+      ans = negativeCarry(ans)
     }else {
       num2 = num2.replace('-', '')
       ans = minus(num1, num2)
-      if (ans.charAt(0)=='-'){
-        var newAns = '-'
-        for (var i=1; i<ans.length-1; i++){
-          newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
-        }
-        if (ans.charAt(ans.length-1)==0){
-          ans = sum(newAns.concat('0'), '-10')
-        }else {
-            ans = newAns.concat((10-Number(ans.charAt(ans.length-1))).toString())
-        }
-      }
+      ans = negativeCarry(ans)
     }
   }else{
     ans = add(num1, num2)
@@ -45,6 +25,21 @@ function sum(num1, num2){
   ans = rmLeadingZeros(ans)
   return ans
 }
+
+function negativeCarry(ans){
+  if (ans.charAt(0)=='-'){
+    var newAns = '-'
+    for (var i=1; i<ans.length-1; i++){
+      newAns = newAns.concat((9-Number(ans.charAt(i))).toString())
+    }
+    if (ans.charAt(ans.length-1)==0){
+      ans = sum(newAns.concat('0'), '-10')
+    }else {
+        ans = newAns.concat((10-Number(ans.charAt(ans.length-1))).toString())
+    }
+  }return ans
+}
+
 module.exports = sum;
 
 // Multiplication signing
