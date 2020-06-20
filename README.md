@@ -20,7 +20,7 @@
 ## Tasks
 
 ### In Progress
-* Significant refactoring is required at minimum to reduce repetition though currently an alternative approach is being considered. Potentially examining ideas in a new branch would be prudent.  
+* Create new datatype
 * Modify code to be contained in Class/classes
 * Extend code to function with decimal inputs
 
@@ -28,3 +28,4 @@
 * Test and write function for positive integer addition
 * Test and modify code for negative integer addition
   * Multiple approaches have been tried in the pursuit of increasing efficiency though steps have not been taken at this point to quantify improvements
+* Refactor on branch Restructure, additionally remove trailing zeros at beginning of sum function in the aim of improving efficiency. The edge case of an ans of -0 has also been dealt with though it has not been tested for.  
