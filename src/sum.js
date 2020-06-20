@@ -5,6 +5,8 @@ const rmLeadingZeros = require(path.join(__dirname,'rmLeadingZeros.js'))
 
 function sum(num1, num2){
   var ans;
+  num1 = rmLeadingZeros(num1)
+  num2 = rmLeadingZeros(num2)
   if (num1.includes('-') & num2.includes('-')){
     num1 = num1.replace('-', '')
     num2 = num2.replace('-', '')
