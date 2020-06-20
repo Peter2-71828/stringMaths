@@ -1,5 +1,7 @@
 function rmLeadingZeros(num){
-  if (num.charAt(0)=='-'){
+  if (num == '-0'){
+    return '0'
+  }else if (num.charAt(0)=='-'){
     while (num.charAt(1)=='0'){
       num = '-'.concat(num.slice(2))
     }
