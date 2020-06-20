@@ -1,6 +1,7 @@
 const path = require('path')
 const add = require(path.join(__dirname,'add.js'))
 const minus = require(path.join(__dirname,'minus.js'))
+const rmLeadingZeros = require(path.join(__dirname,'rmLeadingZeros.js'))
 
 function sum(num1, num2){
   var ans;
@@ -41,15 +42,8 @@ function sum(num1, num2){
   }else{
     ans = add(num1, num2)
   }
-  if (ans.charAt(0)=='-'){
-    while (ans.charAt(1)=='0'){
-      ans = '-'.concat(ans.slice(2))
-    }
-  }else {
-    while (ans.charAt(0)=='0'&&ans.length>1){
-      ans = ans.slice(1)
-    }
-  }return ans
+  ans = rmLeadingZeros(ans)
+  return ans
 }
 module.exports = sum;
 
